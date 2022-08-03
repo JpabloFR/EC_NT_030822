@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Nuevas Tecnologías 03082022</title>
+	</head>
+
+	<body>
+		<!-- Esto es un comentario en HTML y no hace parte funcional del código !-->
+		<h1>1. Botones con acciones y mensajes:</h1>
+
+		<button> Boton Basico </button>
+		<br><br>
+
+		<button onclick="accion_1()" id="Bt1"> Boton 1 </button> <Br>
+
+		<button onclick="accion_2()" id="Bt2"> Boton 2 </button> <Br><Br>
+
+		<button onclick="accion_3()" id="Bt3"> Boton 3 </button> <Br><Br><Br>
+
+		<h1>2. Despliegue de datos:</h1>
+
+		<p>Hola, a continuación solicitaremos algunos datos personales, esperamos nos puedas colaborar con tu información. ¡Gracias!</p>
+		<Br>
+
+		Primer nombre: <input type="text" name="Recibir texto 1" id="Tx_1">	
+
+		Segundo nombre: <input type="text" name="Recibir texto 2" id="Tx_2"> <Br>
+
+		<p> Primer apellido: <input type="text" name="Recibir texto 3" id="Tx_3"> <Br> </p>
+
+		<p> Segundo apellido: <input type="text" name="Recibir texto 4" id="Tx_4"> <Br> </p>
+		
+		<button onclick="accion_4()" id="Bt4"> Concatenar </button> <br><br>
+
+		Nombre completo:&nbsp;<output id="Out1"> </output>
+		
+		<style type="text/css">
+			/* Esto es un comentario en CSS y no hace parte funcional del código 
+			body{background-color: rgba(225,225,225,1.0);} */
+
+			body{ 
+					background-image: url(G01_web.jpg);
+					background-repeat: round;
+					color: rgb(0,0,255);
+				}
+
+			h1{color: rgba(0,100,0,1.0)}
+
+			#Out1{color: rgba(255,0,0,1.0);}
+		</style>
+
+		<script type="text/javascript">
+			// Esto es un comentario en Javascript y no hace parte funcional del código
+
+			function accion_1()
+			{
+				alert("Boton 1 Hola !!!!!!!")
+			}
+			function accion_2(){confirm("Boton 2 Cahoooo !!!")}
+			function accion_3(){alert("Accion del Boton 3");confirm("Mensaje del Boton 3")}
+
+			function accion_4()
+			{
+				var nombreCompleto= document.getElementById("Tx_1").value+" "+
+									document.getElementById("Tx_2").value+" "+
+									document.getElementById("Tx_3").value+" "+
+									document.getElementById("Tx_4").value
+				alert(nombreCompleto)
+				document.getElementById("Out1").innerHTML=nombreCompleto
+			}
+			
+		</script>
+
+	</body>
+
+</html>
